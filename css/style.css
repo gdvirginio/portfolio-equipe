@@ -1,0 +1,421 @@
+/* Custom Styles for IA Mostra - MINIMAL THEMING (only color variables) */
+
+/* ==== COLOR VARIABLES OVERRIDE ==== */
+:root {
+  /* Light mode - soft and easy on the eyes */
+  --bs-body-bg: #fafafa; /* Soft white background */
+  --bs-body-color: #212529; /* Dark gray for primary text */
+  --bs-primary: #0d6efd; /* Bootstrap blue */
+  --bs-border-color: #dee2e6; /* Light gray for borders */
+  --bs-body-bg-rgb: 250, 250, 250;
+  --bs-body-color-rgb: 33, 37, 41;
+}
+
+/* Dark mode - soft dark (not pure black) */
+[data-bs-theme="dark"] {
+  --bs-body-bg: #121212; /* Very dark gray background */
+  --bs-body-color: #e0e0e0; /* Light gray for primary text */
+  --bs-primary: #0d6efd; /* Keep blue for primary (works on dark bg) */
+  --bs-border-color: #333333; /* Darker gray for borders */
+  --bs-body-bg-rgb: 18, 18, 18;
+  --bs-body-color-rgb: 224, 224, 224;
+}
+
+/* Navbar with backdrop blur for better visibility */
+.navbar {
+  background: rgba(var(--bs-body-bg-rgb), 0.7) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-bottom: 1px solid rgba(var(--bs-body-color-rgb), 0.1) !important;
+}
+
+/* Navbar brand and text colors */
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: var(--bs-body-color) !important;
+}
+
+/* Navbar toggler button */
+.navbar-toggler {
+  border-color: rgba(var(--bs-body-color-rgb), 0.5);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(33,37,41,0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  width: 1.5em;
+  height: 1.5em;
+}
+
+[data-bs-theme="dark"] .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(224,224,224,0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ==== MINIMAL CUSTOM STYLES (spacing left to Bootstrap) ==== */
+
+/* Active link indicator in navbar */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  position: relative;
+}
+.navbar-nav .nav-link.active::after,
+.navbar-nav .nav-link.show::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--bs-body-color);
+}
+
+/* Quote box styling (custom component) */
+#quote-box {
+  background-color: rgba(var(--bs-body-color-rgb), 0.03);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+#quote-box blockquote {
+  margin: 0;
+  padding-left: 1rem;
+  border-left: 4px solid var(--bs-border-color);
+}
+#quote-box blockquote p {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--bs-body-color);
+  line-height: 1.6;
+  margin: 0;
+}
+#quote-box blockquote footer {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--bs-body-color);
+  opacity: 0.8;
+}
+
+/* Card hover enhancement (optional) */
+.card {
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Form validation feedback colors (Bootstrap already handles this via variables,
+   but ensuring we don't override unnecessarily) */
+.is-invalid {
+  border-color: #dc3545 !important;
+}
+.is-valid {
+  border-color: #198754 !important;
+}
+
+/* Footer link styling */
+footer a {
+  color: var(--bs-body-color);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: opacity 0.2s;
+}
+footer a:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+/* Theme-adaptive outline button */
+.btn-outline-theme {
+  --bs-btn-color: var(--bs-body-color);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: var(--bs-body-color);
+  --bs-btn-hover-color: var(--bs-body-color);
+  --bs-btn-hover-bg: var(--bs-body-bg);
+  --bs-btn-hover-border-color: var(--bs-body-color);
+  --bs-btn-focus-shadow-rgb: var(--bs-body-color-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: var(--bs-btn-hover-bg);
+  --bs-btn-active-border-color: var(--bs-btn-hover-border-color);
+  --bs-btn-disabled-color: var(--bs-btn-color);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: var(--bs-btn-color);
+  --bs-gradient: none;
+}
+
+/* Responsive tweaks (only if needed) */
+@media (max-width: 576px) {
+  .display-4 {
+    font-size: 2rem;
+  }
+  #sobre h2,
+  .member-title {
+    font-size: 1.75rem;
+  }
+}
+
+/* Carousel custom styles */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 60px; /* Dá espaço para as setas não cobrirem o conteúdo */
+  box-sizing: border-box;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(var(--bs-body-color-rgb), 0.1);
+  backdrop-filter: blur(5px);
+  color: var(--bs-body-color);
+  border: 1px solid rgba(var(--bs-body-color-rgb), 0.2);
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+.carousel-btn.next {
+  right: 10px;
+}
+.carousel-btn:hover {
+  background: rgba(var(--bs-body-color-rgb), 0.2);
+  transform: translateY(-50%) scale(1.05); /* Mantém o alinhamento vertical no hover */
+}
+
+.carousel-track {
+  position: relative;
+  display: grid;
+  width: 100%;
+}
+
+.slide {
+  grid-area: 1 / 1; /* Faz todos os slides ocuparem o mesmo espaço de grid */
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.5s ease-in-out,
+    visibility 0.5s;
+  width: 100%;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Força a Row do Bootstrap a ocupar 100% da largura útil */
+.slide .row {
+  width: 100%;
+  margin: 0;
+}
+
+/* Reseta o comportamento absoluto padrão do Bootstrap para a legenda */
+.slide .carousel-caption {
+  position: static; /* Remove o absolute do Bootstrap */
+  text-align: left;
+  padding: 0;
+  max-width: 100%;
+  color: var(--bs-body-color);
+  background-color: rgba(var(--bs-body-bg-rgb), 0.5); /* Fundo semi-transparente para legibilidade */
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.slide .carousel-caption h5 {
+  margin-top: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.slide .carousel-caption p {
+  margin-bottom: 20px;
+  color: rgba(var(--bs-body-color-rgb), 0.8);
+}
+
+/* Garante que a imagem se ajuste à coluna sem quebrar o grid */
+.slide img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Indicadores na parte inferior */
+.carousel-indicators {
+  position: absolute;
+  bottom: -30px; /* Joga os pontos um pouco para baixo para não sobrepor o conteúdo */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  background: rgba(var(--bs-body-color-rgb), 0.3);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators button.active {
+  background: rgba(var(--bs-body-color-rgb), 0.7);
+  transform: scale(1.2);
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 768px) {
+  .carousel-container {
+    padding: 0 40px;
+  }
+  .slide .carousel-caption {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .slide img {
+    max-height: 250px;
+  }
+  .carousel-indicators {
+    bottom: -25px;
+  }
+}
+
+/* Additional responsive improvements */
+@media (max-width: 992px) {
+  /* Member header - stack image and text on smaller screens */
+  section.py-5.mb-5 .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  section.py-5.mb-5 .col-md-4,
+  section.py-5.mb-5 .col-md-8 {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  section.py-5.mb-5 .col-md-4 {
+    margin-bottom: 2rem;
+  }
+
+  /* About section cards - full width on smaller screens */
+  #sobre .col-md-3 {
+    width: 100%;
+    flex: 0 0 100%;
+    margin-bottom: 2rem;
+  }
+
+  /* Contact form - full width inputs on mobile */
+  #contato .col-md-6 {
+    width: 100%;
+    flex: 0 0 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Reduce padding on sections for mobile */
+  .py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* Adjust heading sizes for mobile */
+  .display-4 {
+    font-size: 2.5rem;
+  }
+
+  h1.member-title {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Further adjustments for very small screens */
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  h1.member-title {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Navbar adjustments */
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  /* Reduce carousel padding on very small screens */
+  .carousel-container {
+    padding: 0 15px;
+  }
+
+  /* Make card images full width */
+  .card-img-top {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .display-4 {
+    font-size: 1.75rem;
+  }
+
+  #sobre h2,
+  .member-title {
+    font-size: 1.5rem;
+  }
+
+  /* Even more compact layout */
+  .py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  /* Quote box adjustments */
+  #quote-box {
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  #quote-box blockquote p {
+    font-size: 1.1rem;
+  }
+
+  /* Button sizes */
+  .btn-lg {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}

@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="pt-BR" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio da equipe - Gianluca Virginio</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet" />
+    <!-- Favicon -->
+    <link rel="icon" href="../../imgs/favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Portfólio da equipe</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Gianluca Virginio
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="../index.html">Início</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="membro1.html"
+                    >Alejandro de Lima</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="membro4.html">Ryan Agria</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-outline-light me-2" id="theme-toggle">
+                <i class="bi bi-moon-stars"></i> Modo Escuro
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-5 pb-5">
+      <!-- Member Header -->
+      <section class="py-5 mb-5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-4">
+              <img
+                src="../imgs/iconGian.png"
+                class="img-fluid rounded-circle shadow"
+                width="200"
+                height="200"
+                alt="Gianluca Virginio - Avatar IA"
+              />
+            </div>
+            <div class="col-md-8">
+              <h1 class="member-title">Gianluca Virginio</h1>
+              <h2 class="text-muted">
+                Estudante do Ensino Médio e Técnico em Desenvolvimento de
+                Sistemas na Etec Dra. Ruth Cardoso
+              </h2>
+              <p class="lead">
+                Estudante do Ensino Médio e Técnico em Desenvolvimento de
+                Sistemas com profundo interesse em tecnologia, programação e
+                resolução de problemas. Atualmente focado em desenvolver
+                habilidades em lógica de programação, desenvolvimento de
+                software e pensamento computacional, iniciando os estudos na
+                linguagem C#. Possui experiência prática na elaboração de
+                relatórios técnicos, produção de artigos acadêmicos conforme as
+                normas ABNT e na realização de apresentações acadêmicas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Me -->
+      <section class="py-5">
+        <div class="container">
+          <h2 class="mb-4">Sobre Mim</h2>
+          <p>
+            Estudante do Ensino Médio e Técnico em Desenvolvimento de Sistemas
+            com profundo interesse em tecnologia, programação e resolução de
+            problemas. Atualmente focado em desenvolver habilidades em lógica de
+            programação, desenvolvimento de software e pensamento computacional,
+            iniciando os estudos na linguagem C#. Possui experiência prática na
+            elaboração de relatórios técnicos, produção de artigos acadêmicos
+            conforme as normas ABNT e na realização de apresentações acadêmicas.
+          </p>
+          <h3 class="mt-4">Tecnologias</h3>
+          <div>
+            <span class="badge bg-primary me-1 mb-1">HTML5</span>
+            <span class="badge bg-primary me-1 mb-1">CSS3</span>
+            <span class="badge bg-primary me-1 mb-1">JavaScript</span>
+            <span class="badge bg-primary me-1 mb-1">React</span>
+            <span class="badge bg-primary me-1 mb-1">Next.js</span>
+            <span class="badge bg-primary me-1 mb-1">Bootstrap</span>
+            <span class="badge bg-primary me-1 mb-1">C#</span>
+            <span class="badge bg-primary me-1 mb-1">C++</span>
+            <span class="badge bg-primary me-1 mb-1">Git</span>
+            <span class="badge bg-primary me-1 mb-1">Vercel</span>
+            <span class="badge bg-primary me-1 mb-1">Figma</span>
+            <span class="badge bg-primary me-1 mb-1">API REST</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Carousel -->
+      <section class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-5">Projetos em Destaque</h2>
+          <div class="carousel-container" id="carouselProjects">
+            <button class="carousel-btn prev" id="prevBtn"><i class="bi bi-chevron-left"></i></button>
+            <div class="carousel-track">
+              <div class="slide active">
+                <div class="row align-items-center">
+                  <div class="col-md-6 text-center">
+                    <img src="https://gianluca-portifolio.vercel.app/src/imgs/resgate-noite.png" class="img-fluid rounded" alt="Resgate da Noite">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="carousel-caption">
+                      <h5>Resgate da Noite</h5>
+                      <p>Site escolar de conscientização sobre poluição luminosa integrado à API do Google Forms em tempo real e com Google Analytics.</p>
+                      <a href="https://resgate-da-noite.vercel.app/" class="btn btn-sm btn-outline-theme">Ver Detalhes</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="row align-items-center">
+                  <div class="col-md-6 text-center">
+                    <img src="https://gianluca-portifolio.vercel.app/src/imgs/studio-glow.png" class="img-fluid rounded" alt="Studio Glow Up">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="carousel-caption">
+                      <h5>Studio Glow Up</h5>
+                      <p>Modelo de site institucional elegante para estúdio de estética, desenvolvido de forma totalmente responsivo.</p>
+                      <a href="https://studio-glow-up.vercel.app/" class="btn btn-sm btn-outline-theme">Ver Detalhes</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="row align-items-center">
+                  <div class="col-md-6 text-center">
+                    <img src="https://gianluca-portifolio.vercel.app/src/imgs/weather.png" class="img-fluid rounded" alt="Weather App">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="carousel-caption">
+                      <h5>Weather App</h5>
+                      <p>Aplicativo de clima funcional que consome dados em tempo real via API REST para qualquer cidade do mundo.</p>
+                      <a href="https://weather-app-chi-inky-35.vercel.app/" class="btn btn-sm btn-outline-theme">Ver Detalhes</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="row align-items-center">
+                  <div class="col-md-6 text-center">
+                    <img src="https://gianluca-portifolio.vercel.app/src/imgs/atelie.png" class="img-fluid rounded" alt="Doce Ateliê">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="carousel-caption">
+                      <h5>Doce Ateliê</h5>
+                      <p>Modelo de landing page para confeitaria artesanal desenvolvido com foco em conversão e usabilidade.</p>
+                      <a href="https://doce-atelie.vercel.app/" class="btn btn-sm btn-outline-theme">Ver Detalhes</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-btn next" id="nextBtn"><i class="bi bi-chevron-right"></i></button>
+            <div class="carousel-indicators" id="indicators"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- External Links -->
+      <section class="py-5 text-center">
+        <div class="container">
+          <h2>Conecte-se comigo</h2>
+          <div class="d-flex justify-content-center gap-4">
+            <a
+              href="https://github.com/gdvirginio"
+              class="btn btn-outline-primary btn-lg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-github me-2"></i>GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/gianlucavirginio"
+              class="btn btn-outline-primary btn-lg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-linkedin me-2"></i>LinkedIn
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-4 pb-4">
+      <div class="container text-center">
+        <p class="mb-0">
+          &copy; 2026. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/main.js"></script>
+  <!-- Carousel JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const track = document.querySelector('.carousel-track');
+      const slides = Array.from(track.children);
+      const nextBtn = document.getElementById('nextBtn');
+      const prevBtn = document.getElementById('prevBtn');
+      const indicatorsContainer = document.getElementById('indicators');
+
+      let currentIndex = 0;
+
+      // Create indicators
+      slides.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.addEventListener('click', () => goToSlide(index));
+        if (index === 0) dot.classList.add('active');
+        indicatorsContainer.appendChild(dot);
+      });
+      const dots = Array.from(indicatorsContainer.children);
+
+      function updateSlide() {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === currentIndex);
+        });
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentIndex);
+        });
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlide();
+      }
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlide();
+      }
+      function goToSlide(index) {
+        currentIndex = index;
+        updateSlide();
+      }
+
+      nextBtn.addEventListener('click', nextSlide);
+      prevBtn.addEventListener('click', prevSlide);
+
+      // Optional auto-play
+      let autoPlay = setInterval(nextSlide, 5000);
+      const carousel = document.querySelector('.carousel-container');
+      carousel.addEventListener('mouseenter', () => clearInterval(autoPlay));
+      carousel.addEventListener('mouseleave', () => {
+        autoPlay = setInterval(nextSlide, 5000);
+      });
+    });
+  </script>
+  </body>
+</html>
