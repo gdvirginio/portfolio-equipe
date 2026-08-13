@@ -1,5 +1,3 @@
-// JavaScript for IA Mostra
-
 // DOM Elements
 const themeToggleBtn = document.getElementById('theme-toggle');
 const quoteBoxQuote = document.querySelector('#quote-box blockquote p');
